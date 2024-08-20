@@ -16,10 +16,11 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   app: {
     head: {
+      // Forcing correct tab favicon image path
       link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
     },
   },
