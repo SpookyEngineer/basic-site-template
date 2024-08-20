@@ -27,18 +27,6 @@ export default {
 </script>
 
 <style scoped>
-/* Add your styles here */
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-}
-
-nav {
-  display: flex;
-  gap: 1rem;
-}
-
 main {
   padding: 2rem;
 }
