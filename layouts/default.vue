@@ -21,8 +21,14 @@
   </div>
 </template>
 
-<script setup>
-// You can add script logic here if needed
+<script>
+export default {
+  app: {
+    head: {
+      link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    },
+  },
+};
 </script>
 
 <style scoped>
