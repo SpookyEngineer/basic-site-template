@@ -1,12 +1,7 @@
 <template>
   <div>
     <header>
-      <nav>
-        <!-- Navigation links, logo, etc. -->
-        <nuxt-link to="/">Home</nuxt-link>
-        <nuxt-link to="/about">About</nuxt-link>
-        <!-- Add more links as needed -->
-      </nav>
+      <navbar />
     </header>
 
     <main>
