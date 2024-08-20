@@ -12,11 +12,18 @@ export default defineNuxtConfig({
         config.plugins.push(vuetify({ autoImport: true }));
       });
     },
-    //...
-    "@nuxtjs/tailwindcss",
     "@nuxt/image",
     "@nuxt/ui",
+    /* The above also includes: 
+    @nuxt/icon
+    @nuxtjs/tailwindcss
+    @nuxtjs/color-mode
+    */
   ],
+
+  colorMode: {
+    preference: "light",
+  },
 
   vite: {
     vue: {
