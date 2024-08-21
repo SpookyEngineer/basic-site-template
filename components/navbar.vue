@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- Navbar header -->
     <div class="flex flex-col bg-aconchego-green text-white p-4">
       <!-- Navigation links, logo, etc. -->
       <div class="flex justify-between">
@@ -10,15 +11,60 @@
         </div>
       </div>
 
-      <!-- Add more links as needed -->
+      <!-- Navbar links -->
     </div>
-    <nav class="flex justify-center align-middle bg-black py-2">
-      <nuxt-link to="/">Home</nuxt-link>
-      <nuxt-link to="/about">About</nuxt-link>
+    <nav class="flex justify-center align-middle bg-white py-2">
+      <nuxt-link class="mx-2" to="/">Home</nuxt-link>
+
+      <UDropdown
+        :items="items"
+        mode="hover"
+        :popper="{ placement: 'bottom-start' }"
+      >
+        <!-- The below is the dropdown label -->
+        <span v-on:click="clickFunction"
+          >About Us <Icon name="i-heroicons-chevron-down-20-solid"
+        /></span>
+
+        <template #item="{ item }">
+          <span>{{ item.label }}</span>
+        </template>
+      </UDropdown>
     </nav>
   </div>
 </template>
-<script>
-export default {};
+
+<script setup lang="ts">
+function clickFunction() {
+  console.log("Button clicked");
+}
+
+const items = [
+  [
+    {
+      label: "Profile",
+      click: () => {
+        console.log("Clicked");
+      },
+    },
+    {
+      label: "Edit",
+      click: () => {
+        console.log("Clicked");
+      },
+    },
+    {
+      label: "Duplicate",
+      click: () => {
+        console.log("Clicked");
+      },
+    },
+    {
+      label: "Archive",
+      click: () => {
+        console.log("Clicked");
+      },
+    },
+  ],
+];
 </script>
-<style></style>
