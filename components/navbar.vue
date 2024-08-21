@@ -1,17 +1,5 @@
 <template>
   <div>
-    <!-- Navbar header -->
-    <div class="flex flex-col bg-aconchego-green text-white p-4">
-      <div class="flex justify-between">
-        <NuxtImg height="72px" quality="80" src="/clinica.png" />
-        <div class="flex flex-col align-middle justify-center">
-          <p>Contacte-nos</p>
-          <p>Chamada</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Navbar links -->
     <nav class="flex justify-center align-middle bg-white py-2">
       <nuxt-link class="mx-2" to="/">Home</nuxt-link>
 

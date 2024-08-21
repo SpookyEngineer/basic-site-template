@@ -1,6 +1,16 @@
 <template>
   <div>
-    <header>
+    <header class="sticky top-0 z-50">
+      <div class="flex flex-col bg-aconchego-green text-white p-4">
+        <div class="flex justify-between">
+          <NuxtImg height="72px" quality="80" src="/clinica.png" />
+          <div class="flex flex-col align-middle justify-center">
+            <p>Contacte-nos</p>
+            <p>Chamada</p>
+          </div>
+        </div>
+      </div>
+
       <navbar />
     </header>
 
