@@ -1,13 +1,13 @@
 <template>
   <div>
     <UDropdown
-      :items="items"
+      :items="dropdownData.items"
       mode="hover"
       :popper="{ placement: 'bottom-start' }"
     >
       <!-- The below is the dropdown label -->
       <span v-on:click="routingFunction('/about')"
-        >{{ name }}<Icon name="i-heroicons-chevron-down-20-solid"
+        >{{ dropdownData.name }}<Icon name="i-heroicons-chevron-down-20-solid"
       /></span>
 
       <!-- The below is the dropdown itself -->
@@ -37,9 +37,13 @@ interface Item {
 
 type ItemsArray = Item[][];
 
-interface Props {
+interface dropdownDataType {
   name: string;
   items: ItemsArray;
+}
+
+interface Props {
+  dropdownData: dropdownDataType;
 }
 
 const props = defineProps<Props>();
