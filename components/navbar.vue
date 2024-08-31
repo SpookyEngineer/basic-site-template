@@ -28,7 +28,7 @@ import { useRouter } from "nuxt/app";
 
 const router = useRouter();
 
-function routingFunction(route) {
+function routingFunction(route: string) {
   router.push(route);
 }
 
