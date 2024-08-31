@@ -53,5 +53,4 @@ const aboutUsLink = {
 
 The data structure of the `items` is based on the Dropdown component of NuxtUI.
 Each array inside the parent array is a "category" inside the dropdown itself.
-For more information, refer to their documentation:
-<https://ui.nuxt.com/components/dropdown>
+For more information, refer to the [NuxtUI dropdown component documentation](https://ui.nuxt.com/components/dropdown)
