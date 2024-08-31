@@ -18,6 +18,8 @@ export default defineNuxtConfig({
     @nuxtjs/tailwindcss
     @nuxtjs/color-mode
     */
+    "@formkit/auto-animate/nuxt",
+    "@morev/vue-transitions/nuxt",
   ],
 
   colorMode: {

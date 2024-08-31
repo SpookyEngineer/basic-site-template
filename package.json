@@ -10,7 +10,9 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@formkit/auto-animate": "^0.8.2",
     "@mdi/font": "^7.4.47",
+    "@morev/vue-transitions": "^3.0.2",
     "@nuxt/image": "^1.7.0",
     "@nuxt/ui": "^2.18.4",
     "nuxt": "^3.12.4",
