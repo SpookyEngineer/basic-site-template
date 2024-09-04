@@ -10,7 +10,7 @@
       <!-- The below is the dropdown label -->
       <span
         class="flex items-center cursor-pointer"
-        v-on:click="routingFunction('/about')"
+        v-on:click="routingFunction(`/${navbarData.route}`)"
       >
         {{ navbarData.name }}
         <Icon
