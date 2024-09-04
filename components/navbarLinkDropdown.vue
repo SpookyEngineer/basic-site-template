@@ -6,8 +6,9 @@
       :popper="{ placement: 'bottom-start' }"
     >
       <!-- The below is the dropdown label -->
-      <span v-on:click="routingFunction('/about')"
-        >{{ navbarData.name }}<Icon name="i-heroicons-chevron-down-20-solid"
+      <span class="flex items-center" v-on:click="routingFunction('/about')"
+        >{{ navbarData.name
+        }}<Icon class="ml-1" name="i-heroicons-chevron-down-20-solid"
       /></span>
 
       <!-- The below is the dropdown itself -->

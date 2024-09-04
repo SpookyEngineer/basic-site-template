@@ -2,10 +2,10 @@
   <div class="border-y">
     <nav class="flex justify-center align-middle bg-white py-2">
       <div v-for="(link, index) in navbarData" :key="index">
-        <nuxt-link v-if="!link.items" class="mx-2" to="/">{{
+        <nuxt-link v-if="!link.items" class="mx-1" to="/">{{
           link.name
         }}</nuxt-link>
-        <NavbarLinkDropdown v-if="link.items" :navbarData="link" />
+        <NavbarLinkDropdown class="ml-1" v-if="link.items" :navbarData="link" />
       </div>
     </nav>
   </div>
