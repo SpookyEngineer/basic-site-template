@@ -1,13 +1,13 @@
 <template>
   <div>
     <UDropdown
-      :items="dropdownData.items"
+      :items="navbarData.items"
       mode="hover"
       :popper="{ placement: 'bottom-start' }"
     >
       <!-- The below is the dropdown label -->
       <span v-on:click="routingFunction('/about')"
-        >{{ dropdownData.name }}<Icon name="i-heroicons-chevron-down-20-solid"
+        >{{ navbarData.name }}<Icon name="i-heroicons-chevron-down-20-solid"
       /></span>
 
       <!-- The below is the dropdown itself -->
@@ -29,21 +29,22 @@ function routingFunction(route: string) {
   router.push(route);
 }
 
-// The below is required in order to fix a type error in regard to arrays within arrays
-interface Item {
+interface subRoute {
   label: string;
   subRoute: string;
 }
 
-type ItemsArray = Item[][];
+interface itemsArray extends Array<subRoute[]> {}
 
-interface dropdownDataType {
+interface navbarItem {
   name: string;
-  items: ItemsArray;
+  items: itemsArray;
 }
 
+type navbarData = navbarItem[];
+
 interface Props {
-  dropdownData: dropdownDataType;
+  navbarData: any;
 }
 
 const props = defineProps<Props>();
