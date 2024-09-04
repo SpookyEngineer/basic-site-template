@@ -20,7 +20,7 @@
             v-if="!link.items"
             class="block pt-2"
             @click="toggleMenu"
-            :to="`/${link.name.toLowerCase()}`"
+            :to="`${link.route}`"
           >
             {{ link.name }}
           </nuxt-link>
@@ -43,7 +43,7 @@
                 :key="item.subRoute"
                 class="block py-1"
                 @click="toggleMenu"
-                :to="`/about#${item.subRoute}`"
+                :to="`/${link.route}#${item.subRoute}`"
               >
                 {{ item.label }}
               </nuxt-link>
@@ -60,23 +60,24 @@ import { ref } from "vue";
 
 const dropdownOpen = ref<boolean[]>([]);
 
-interface subRoute {
+interface SubRoute {
   label: string;
   subRoute: string;
 }
 
-interface itemsArray extends Array<subRoute[]> {}
+interface ItemsArray extends Array<SubRoute[]> {}
 
-interface navbarItem {
+interface NavbarItem {
   name: string;
-  items?: itemsArray;
+  route: string;
+  items?: ItemsArray;
 }
 
-type navbarData = navbarItem[];
+type NavbarData = NavbarItem[];
 
 interface Props {
   menuOpen: Boolean;
-  navbarData: navbarData;
+  navbarData: NavbarData;
 }
 
 const props = defineProps<Props>();

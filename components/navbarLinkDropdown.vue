@@ -22,7 +22,9 @@
 
       <!-- The below is the dropdown itself -->
       <template #item="{ item }">
-        <span v-on:click="routingFunction(`/about#${item.subRoute}`)">
+        <span
+          v-on:click="routingFunction(`/${navbarData.route}#${item.subRoute}`)"
+        >
           {{ item.label }}
         </span>
       </template>
@@ -42,22 +44,21 @@ function routingFunction(route: string) {
 
 const isDropdownOpen = ref(false);
 
-interface subRoute {
+interface SubRoute {
   label: string;
   subRoute: string;
 }
 
-interface itemsArray extends Array<subRoute[]> {}
+interface ItemsArray extends Array<SubRoute[]> {}
 
-interface navbarItem {
+interface NavbarItem {
   name: string;
-  items: itemsArray;
+  route: string;
+  items?: ItemsArray;
 }
 
-type navbarData = navbarItem[];
-
 interface Props {
-  navbarData: any;
+  navbarData: NavbarItem;
 }
 
 const props = defineProps<Props>();
