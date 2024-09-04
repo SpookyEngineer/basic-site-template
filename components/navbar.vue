@@ -6,7 +6,6 @@
           {{ link.name }}
         </nuxt-link>
         <NavbarLinkDropdown class="ml-1" v-else :navbarData="link" />
-        {{ link }}
       </div>
     </nav>
   </div>
