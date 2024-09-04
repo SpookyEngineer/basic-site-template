@@ -18,7 +18,6 @@
       <navbarMobile
         class="md:hidden"
         v-model:menuOpen="menuOpen"
-        v-model:dropdownOpen="dropdownOpen"
         :navbarData="navbarData"
       />
       <navbar class="hidden md:block" :navbarData="navbarData" />
@@ -39,7 +38,6 @@
 import { ref } from "vue";
 
 const menuOpen = ref(false);
-const dropdownOpen = ref(false);
 
 const navbarData = [
   {
