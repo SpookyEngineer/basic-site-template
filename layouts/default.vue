@@ -15,44 +15,10 @@
         </div>
       </div>
 
-      <!-- Full-Screen Slide-In Menu -->
-      <TransitionExpand axis="x">
-        <div v-if="menuOpen" class="fixed inset-0 bg-white text-black p-6 z-50">
-          <div class="flex justify-between items-center mb-6">
-            <span class="text-lg font-bold">Menu</span>
-
-            <!-- Close Button -->
-            <button @click="toggleMenu" class="focus:outline-none">
-              <Icon name="material-symbols:close-rounded" size="26px" />
-            </button>
-          </div>
-          <div class="flex flex-col">
-            <nuxt-link class="block py-2" @click="toggleMenu" to="/"
-              >Home</nuxt-link
-            >
-            <div>
-              <div
-                @click="toggleDropdown"
-                class="flex justify-between items-center cursor-pointer"
-              >
-                {{ aboutUsLink.name }}
-                <Icon name="i-heroicons-chevron-down-20-solid" />
-              </div>
-              <div v-if="dropdownOpen" class="ml-4 mt-2">
-                <nuxt-link
-                  v-for="item in aboutUsLink.items[0]"
-                  :key="item.subRoute"
-                  class="block py-1"
-                  @click="toggleMenu"
-                  :to="`/about#${item.subRoute}`"
-                >
-                  {{ item.label }}
-                </nuxt-link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </TransitionExpand>
+      <navbarMobile
+        v-model:menuOpen="menuOpen"
+        v-model:dropdownOpen="dropdownOpen"
+      />
     </header>
 
     <!-- <Icon name="cil:hamburger-menu" /> -->
@@ -84,12 +50,9 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
-import { useRouter } from "nuxt/app";
+import { ref } from "vue";
 
-const router = useRouter();
-
-const aboutUsLink = {
+/* const aboutUsLink = {
   name: "About Us",
   items: [
     [
@@ -99,17 +62,14 @@ const aboutUsLink = {
       { label: "Contact Us", subRoute: "contact" },
     ],
   ],
-};
+}; */
 
 const menuOpen = ref(false);
 const dropdownOpen = ref(false);
+const navbarData = [];
 
 function toggleMenu() {
   menuOpen.value = !menuOpen.value;
-}
-
-function toggleDropdown() {
-  dropdownOpen.value = !dropdownOpen.value;
 }
 </script>
 
