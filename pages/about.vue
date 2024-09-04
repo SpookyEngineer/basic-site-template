@@ -245,7 +245,7 @@
 
 <script setup lang="ts">
 useHead({
-  title: "Home Page",
+  title: "About Us",
 });
 </script>
 

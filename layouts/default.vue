@@ -42,15 +42,33 @@ const menuOpen = ref(false);
 const navbarData = [
   {
     name: "Home",
+    route: "/",
   },
   {
     name: "About Us",
+    route: "about",
     items: [
       [
         { label: "About Us", subRoute: "about" },
         { label: "Our Mission", subRoute: "mission" },
         { label: "Our Values", subRoute: "values" },
         { label: "Contact Us", subRoute: "contact" },
+      ],
+    ],
+  },
+  {
+    name: "Contact Us",
+    route: "contact-us",
+  },
+  {
+    name: "Our Team",
+    route: "team",
+    items: [
+      [
+        { label: "Team 1", subRoute: "team1" },
+        { label: "Team 2", subRoute: "team2" },
+        { label: "Team 3", subRoute: "team3" },
+        { label: "Team 4", subRoute: "team4" },
       ],
     ],
   },
