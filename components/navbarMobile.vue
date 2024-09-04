@@ -10,21 +10,36 @@
             <Icon name="material-symbols:close-rounded" size="26px" />
           </button>
         </div>
-        <div class="flex flex-col">
-          <nuxt-link class="block py-2" @click="toggleMenu" to="/"
-            >Home</nuxt-link
+
+        <div
+          v-for="(link, index) in navbarData"
+          :key="index"
+          class="flex flex-col"
+        >
+          <nuxt-link
+            v-if="!link.items"
+            class="block pt-2"
+            @click="toggleMenu"
+            :to="`/${link.name.toLowerCase()}`"
           >
-          <div>
+            {{ link.name }}
+          </nuxt-link>
+
+          <div v-else>
             <div
-              @click="toggleDropdown"
-              class="flex justify-between items-center cursor-pointer"
+              @click="toggleDropdown(index)"
+              class="flex justify-between items-center cursor-pointer pt-1"
             >
-              {{ aboutUsLink.name }}
-              <Icon name="i-heroicons-chevron-down-20-solid" />
+              {{ link.name }}
+              <Icon
+                name="charm:chevron-down"
+                class="transition-transform duration-300 ease-in-out"
+                :class="{ 'rotate-180': dropdownOpen[index] }"
+              />
             </div>
-            <div v-if="dropdownOpen" class="ml-4 mt-2">
+            <div v-if="dropdownOpen[index]" class="ml-4 mt-2">
               <nuxt-link
-                v-for="item in aboutUsLink.items[0]"
+                v-for="item in link.items[0]"
                 :key="item.subRoute"
                 class="block py-1"
                 @click="toggleMenu"
@@ -41,33 +56,46 @@
 </template>
 
 <script setup lang="ts">
-const aboutUsLink = {
-  name: "About Us",
-  items: [
-    [
-      { label: "About Us", subRoute: "about" },
-      { label: "Our Mission", subRoute: "mission" },
-      { label: "Our Values", subRoute: "values" },
-      { label: "Contact Us", subRoute: "contact" },
-    ],
-  ],
-};
+import { ref } from "vue";
+
+const dropdownOpen = ref<boolean[]>([]);
+
+interface subRoute {
+  label: string;
+  subRoute: string;
+}
+
+interface itemsArray extends Array<subRoute[]> {}
+
+interface navbarItem {
+  name: string;
+  items?: itemsArray;
+}
+
+type navbarData = navbarItem[];
 
 interface Props {
   menuOpen: Boolean;
-  dropdownOpen: Boolean;
-  //navbarData: Array<Object>;
+  navbarData: navbarData;
 }
 
 const props = defineProps<Props>();
 
-const emit = defineEmits(["update:menuOpen", "update:dropdownOpen"]);
+const emit = defineEmits(["update:menuOpen"]);
 
 function toggleMenu() {
   emit("update:menuOpen", !props.menuOpen);
 }
 
-function toggleDropdown() {
-  emit("update:dropdownOpen", !props.dropdownOpen);
+function toggleDropdown(index: number) {
+  dropdownOpen.value = props.navbarData.map((_, i) =>
+    i === index ? !dropdownOpen.value[i] : false
+  );
 }
 </script>
+
+<style scoped>
+.rotate-180 {
+  transform: rotate(180deg);
+}
+</style>
