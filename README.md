@@ -12,7 +12,7 @@
 
 ## Setup
 
-**_This project was made using ==Node v18.20.1==_**
+**_This project was made using Node v18.20.1_**
 
 Make sure to install the dependencies:
 
