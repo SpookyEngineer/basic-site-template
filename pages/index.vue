@@ -66,7 +66,7 @@
         <br />
         É o local ideal para passar uma boa parte do dia e fugir ao isolamento.
       </p>
-      <div class="grid grid-cols-3 gap-8 pb-12 pt-8 px-32 w-full">
+      <div class="hidden md:grid md:grid-cols-3 gap-8 pb-12 pt-8 px-32 w-full">
         <div
           class="h-32 overflow-hidden"
           v-for="(item, index) in thisSpaceData"
@@ -80,6 +80,13 @@
           />
         </div>
       </div>
+    </div>
+    <!-- Mobile Section -->
+    <div class="mx-8 my-4 md:hidden">
+      <CarouselMobile
+        class="grayscale-transition"
+        :carouselData="thisSpaceData"
+      />
     </div>
   </div>
 </template>
