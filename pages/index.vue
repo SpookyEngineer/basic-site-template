@@ -110,10 +110,130 @@
         :carouselData="ourRoomsData"
       />
     </div>
+
+    <!-- Accesses Section -->
+    <ImgOverlay>
+      <template #img>
+        <img
+          class="w-full block max-h-96 object-cover"
+          src="/images/lar_idosos.webp"
+          alt="Sample Image"
+        />
+      </template>
+      <template #text>
+        <h2 class="text-2xl md:text-4xl font-ubuntu">CORREDORES E ACESSOS</h2>
+      </template>
+    </ImgOverlay>
+    <GreyscaleTextImages :imagesData="accessData">
+      <template #text>
+        <p class="text-center">
+          Os nossos corredores e acessos são adaptados para pessoas com menor
+          mobilidade para que todos os utentes se possam movimentar para
+          qualquer parte das nossas instalações.
+        </p>
+      </template>
+    </GreyscaleTextImages>
+    <CarouselMobile class="grayscale-transition" :carouselData="accessData" />
+
+    <!-- Kitchen Section -->
+    <ImgOverlay>
+      <template #img>
+        <img
+          class="w-full block max-h-96 object-cover"
+          src="/images/lar_idosos.webp"
+          alt="Sample Image"
+        />
+      </template>
+      <template #text>
+        <h2 class="text-2xl md:text-4xl font-ubuntu">COZINHA</h2>
+      </template>
+    </ImgOverlay>
+    <GreyscaleTextImages :imagesData="kitchenData">
+      <template #text>
+        <p class="text-center">
+          Na nossa cozinha preparamos refeições saudáveis e nutritivas.
+          <br class="hidden md:block" />
+          Os nossos cozinheiros têm em atenção as restrições das dietas para que
+          não prejudiquem a saúde dos utentes.
+        </p>
+      </template>
+    </GreyscaleTextImages>
+    <CarouselMobile class="grayscale-transition" :carouselData="kitchenData" />
+
+    <!-- Exteriors Section -->
+    <ImgOverlay>
+      <template #img>
+        <img
+          class="w-full block max-h-96 object-cover"
+          src="/images/lar_idosos.webp"
+          alt="Sample Image"
+        />
+      </template>
+      <template #text>
+        <h2 class="text-2xl md:text-4xl font-ubuntu">EXTERIORES</h2>
+      </template>
+    </ImgOverlay>
+    <GreyscaleTextImages :imagesData="exteriorsData">
+      <template #text>
+        <p class="text-center">
+          Veja os exteriores das nossas instalações e conheça os espaços ao ar
+          livre de que pode usufruir.
+        </p>
+      </template>
+    </GreyscaleTextImages>
+    <CarouselMobile
+      class="grayscale-transition"
+      :carouselData="exteriorsData"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
+const exteriorsData = [
+  {
+    img: "/images/this_space.webp",
+    imgTitle: "Image Title",
+  },
+  {
+    img: "/images/this_space.webp",
+    imgTitle: "Image Title",
+  },
+  {
+    img: "/images/this_space.webp",
+    imgTitle: "Image Title",
+  },
+];
+
+const kitchenData = [
+  {
+    img: "/images/this_space.webp",
+    imgTitle: "Image Title",
+  },
+  {
+    img: "/images/this_space.webp",
+    imgTitle: "Image Title",
+  },
+  {
+    img: "/images/this_space.webp",
+    imgTitle: "Image Title",
+  },
+];
+
+const accessData = [
+  {
+    img: "/images/this_space.webp",
+    imgTitle: "Image Title",
+  },
+  {
+    img: "/images/this_space.webp",
+    imgTitle: "Image Title",
+  },
+  {
+    img: "/images/this_space.webp",
+    imgTitle: "Image Title",
+  },
+];
+
 const ourRoomsData = [
   {
     img: "/images/this_space.webp",
