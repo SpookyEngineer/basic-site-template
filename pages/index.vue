@@ -11,7 +11,7 @@
       </template>
       <template #text>
         <div>
-          <h1 class="text-2xl md:text-5xl font-ubuntu">LAR DE IDOSOS</h1>
+          <h1 class="text-2xl md:text-4xl font-ubuntu">LAR DE IDOSOS</h1>
           <button
             class="bg-aconchego-green py-2 px-6 rounded-lg mt-4 font-bold font-roboto"
           >
@@ -54,7 +54,7 @@
         />
       </template>
       <template #text>
-        <h2 class="text-2xl md:text-5xl font-ubuntu">SALA DE CONVIVIO</h2>
+        <h2 class="text-2xl md:text-4xl font-ubuntu">SALA DE CONVIVIO</h2>
       </template>
     </ImgOverlay>
   </div>
