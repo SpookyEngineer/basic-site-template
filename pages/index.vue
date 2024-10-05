@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- Lar de Idosos Image -->
     <ImgOverlay>
       <template #img>
         <img
@@ -35,6 +36,7 @@
       </p>
     </div>
 
+    <!-- Carousels -->
     <div
       class="bg-aconchego-green flex items-centers justify-center p-8 md:p-16"
     >
