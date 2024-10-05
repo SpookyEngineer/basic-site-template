@@ -34,11 +34,65 @@
         Maia e Matosinhos.
       </p>
     </div>
+
+    <div
+      class="bg-aconchego-green flex items-centers justify-center px-12 py-16"
+    >
+      <n-carousel
+        :loop="true"
+        draggable
+        autoplay
+        :show-dots="false"
+        :slides-per-view="4"
+        :space-between="25"
+      >
+        <n-carousel-item v-for="(item, index) in carouselData" :key="index">
+          <div class="overflow-hidden relative group h-80">
+            <img
+              class="w-full h-full object-cover transform transition-transform duration-500 scale-125 group-hover:scale-100"
+              :src="item.img"
+              :title="item.imgTitle"
+            />
+          </div>
+        </n-carousel-item>
+      </n-carousel>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
 const route = useRoute();
+
+const carouselData = [
+  {
+    img: "/images/tempLounge.webp",
+    imgTitle: "Image Title",
+  },
+  {
+    img: "/images/tempLounge.webp",
+    imgTitle: "Image Title",
+  },
+  {
+    img: "/images/tempLounge.webp",
+    imgTitle: "Image Title",
+  },
+  {
+    img: "/images/tempLounge.webp",
+    imgTitle: "Image Title",
+  },
+  {
+    img: "/images/tempLounge.webp",
+    imgTitle: "Image Title",
+  },
+  {
+    img: "/images/tempLounge.webp",
+    imgTitle: "Image Title",
+  },
+  {
+    img: "/images/tempLounge.webp",
+    imgTitle: "Image Title",
+  },
+];
 
 useHead({
   title: "Clinica de Repouso",
