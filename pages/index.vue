@@ -88,10 +88,82 @@
         :carouselData="thisSpaceData"
       />
     </div>
+
+    <!-- Our Rooms Section -->
+    <ImgOverlay>
+      <template #img>
+        <img
+          class="w-full block max-h-96 object-cover"
+          src="/images/lar_idosos.webp"
+          alt="Sample Image"
+        />
+      </template>
+      <template #text>
+        <h2 class="text-2xl md:text-4xl font-ubuntu">SALA DE CONVIVIO</h2>
+      </template>
+    </ImgOverlay>
+    <div class="flex flex-col items-center justify-center mt-6">
+      <p class="text-center">
+        Os nossos quartos apresentam toda a comodidade que os nossos utente
+        precisam. Todos os quartos têm casa de banho privativa, televisão por
+        cabo e telefone.
+        <br class="hidden md:block" />
+        Decorados com um ambiente acolhedor, tornam a sua estadia muito
+        agradável. Pode optar por quartos individuais ou duplos.
+      </p>
+      <div class="hidden md:grid md:grid-cols-3 gap-8 pb-12 pt-8 px-32 w-full">
+        <div
+          class="h-32 overflow-hidden"
+          v-for="(item, index) in ourRoomsData"
+          :key="index"
+        >
+          <img
+            class="grayscale-transition object-cover"
+            :src="item.img"
+            :alt="item.imgTitle"
+            :title="item.imgTitle"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- Mobile Section -->
+    <div class="mx-8 my-4 md:hidden">
+      <CarouselMobile
+        class="grayscale-transition"
+        :carouselData="ourRoomsData"
+      />
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
+const ourRoomsData = [
+  {
+    img: "/images/this_space.webp",
+    imgTitle: "Image Title",
+  },
+  {
+    img: "/images/this_space.webp",
+    imgTitle: "Image Title",
+  },
+  {
+    img: "/images/this_space.webp",
+    imgTitle: "Image Title",
+  },
+  {
+    img: "/images/this_space.webp",
+    imgTitle: "Image Title",
+  },
+  {
+    img: "/images/this_space.webp",
+    imgTitle: "Image Title",
+  },
+  {
+    img: "/images/this_space.webp",
+    imgTitle: "Image Title",
+  },
+];
+
 const thisSpaceData = [
   {
     img: "/images/this_space.webp",
