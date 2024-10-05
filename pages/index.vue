@@ -36,9 +36,10 @@
     </div>
 
     <div
-      class="bg-aconchego-green flex items-centers justify-center px-16 py-16"
+      class="bg-aconchego-green flex items-centers justify-center p-8 md:p-16"
     >
       <Carousel :carouselData="carouselData" />
+      <CarouselMobile :carouselData="carouselData" />
     </div>
   </div>
 </template>
