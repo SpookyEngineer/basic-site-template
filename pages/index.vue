@@ -49,31 +49,31 @@ const route = useRoute();
 
 const carouselData = [
   {
-    img: "/images/tempLounge.webp",
+    img: "/images/lounge.webp",
     imgTitle: "Image Title",
   },
   {
-    img: "/images/tempLounge.webp",
+    img: "/images/lounge.webp",
     imgTitle: "Image Title",
   },
   {
-    img: "/images/tempLounge.webp",
+    img: "/images/lounge.webp",
     imgTitle: "Image Title",
   },
   {
-    img: "/images/tempLounge.webp",
+    img: "/images/lounge.webp",
     imgTitle: "Image Title",
   },
   {
-    img: "/images/tempLounge.webp",
+    img: "/images/lounge.webp",
     imgTitle: "Image Title",
   },
   {
-    img: "/images/tempLounge.webp",
+    img: "/images/lounge.webp",
     imgTitle: "Image Title",
   },
   {
-    img: "/images/tempLounge.webp",
+    img: "/images/lounge.webp",
     imgTitle: "Image Title",
   },
 ];
