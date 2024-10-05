@@ -6,7 +6,8 @@ module.exports = {
         "aconchego-red": "#E03F3D",
       },
       fontFamily: {
-        roboto: ['"Roboto"', "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+        "ubuntu-condensed": ["Ubuntu Condensed", "sans-serif"],
       },
     },
   },
