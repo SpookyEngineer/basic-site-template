@@ -185,6 +185,27 @@
       class="grayscale-transition"
       :carouselData="exteriorsData"
     />
+
+    <!-- Location Section -->
+    <ImgOverlay>
+      <template #img>
+        <img
+          class="w-full block max-h-96 object-cover"
+          src="/images/lar_idosos.webp"
+          alt="Sample Image"
+        />
+      </template>
+      <template #text>
+        <h2 class="text-2xl md:text-4xl font-ubuntu mb-2">LOCALIZAÇÃO</h2>
+        <p>
+          Visite as nossas instalações na rua Lorem Ipsum. Marque já a sua
+          visita!
+        </p>
+        <br />
+        <p class="mb-6">Lorem Ipsum dolor sit amet</p>
+        <n-button>Marque ums visita</n-button>
+      </template>
+    </ImgOverlay>
   </div>
 </template>
 
