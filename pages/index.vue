@@ -49,7 +49,7 @@
       <template #img>
         <img
           class="w-full block max-h-96 object-cover"
-          src="/images/lar_idosos.webp"
+          src="/images/this_space.webp"
           alt="Sample Image"
         />
       </template>
@@ -59,28 +59,17 @@
     </ImgOverlay>
 
     <!-- This Space Section -->
-    <div class="flex flex-col items-center justify-center mt-6">
-      <p class="text-center">
-        Neste espaço, os utentes têm a possibilidade de conviver uns com os
-        outros e partilhar momentos, atividades e recordações.
-        <br class="hidden md:block" />
-        É o local ideal para passar uma boa parte do dia e fugir ao isolamento.
-      </p>
-      <div class="hidden md:grid md:grid-cols-3 gap-8 pb-12 pt-8 px-32 w-full">
-        <div
-          class="h-32 overflow-hidden"
-          v-for="(item, index) in thisSpaceData"
-          :key="index"
-        >
-          <img
-            class="grayscale-transition object-cover"
-            :src="item.img"
-            :alt="item.imgTitle"
-            :title="item.imgTitle"
-          />
-        </div>
-      </div>
-    </div>
+    <GreyscaleTextImages :imagesData="thisSpaceData">
+      <template #text>
+        <p class="text-center">
+          Neste espaço, os utentes têm a possibilidade de conviver uns com os
+          outros e partilhar momentos, atividades e recordações.
+          <br class="hidden md:block" />
+          É o local ideal para passar uma boa parte do dia e fugir ao
+          isolamento.
+        </p>
+      </template>
+    </GreyscaleTextImages>
     <!-- Mobile Section -->
     <div class="mx-8 my-4 md:hidden">
       <CarouselMobile
@@ -99,33 +88,21 @@
         />
       </template>
       <template #text>
-        <h2 class="text-2xl md:text-4xl font-ubuntu">SALA DE CONVIVIO</h2>
+        <h2 class="text-2xl md:text-4xl font-ubuntu">QUARTOS</h2>
       </template>
     </ImgOverlay>
-    <div class="flex flex-col items-center justify-center mt-6">
-      <p class="text-center">
-        Os nossos quartos apresentam toda a comodidade que os nossos utente
-        precisam. Todos os quartos têm casa de banho privativa, televisão por
-        cabo e telefone.
-        <br class="hidden md:block" />
-        Decorados com um ambiente acolhedor, tornam a sua estadia muito
-        agradável. Pode optar por quartos individuais ou duplos.
-      </p>
-      <div class="hidden md:grid md:grid-cols-3 gap-8 pb-12 pt-8 px-32 w-full">
-        <div
-          class="h-32 overflow-hidden"
-          v-for="(item, index) in ourRoomsData"
-          :key="index"
-        >
-          <img
-            class="grayscale-transition object-cover"
-            :src="item.img"
-            :alt="item.imgTitle"
-            :title="item.imgTitle"
-          />
-        </div>
-      </div>
-    </div>
+    <GreyscaleTextImages :imagesData="ourRoomsData">
+      <template #text>
+        <p class="text-center">
+          Os nossos quartos apresentam toda a comodidade que os nossos utente
+          precisam. Todos os quartos têm casa de banho privativa, televisão por
+          cabo e telefone.
+          <br class="hidden md:block" />
+          Decorados com um ambiente acolhedor, tornam a sua estadia muito
+          agradável. Pode optar por quartos individuais ou duplos.
+        </p>
+      </template>
+    </GreyscaleTextImages>
     <!-- Mobile Section -->
     <div class="mx-8 my-4 md:hidden">
       <CarouselMobile
