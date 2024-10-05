@@ -43,6 +43,20 @@
       <Carousel :carouselData="carouselData" />
       <CarouselMobile :carouselData="carouselData" />
     </div>
+
+    <!-- Sala de Convivio Image -->
+    <ImgOverlay>
+      <template #img>
+        <img
+          class="w-full block max-h-96 object-cover"
+          src="/images/lar_idosos.webp"
+          alt="Sample Image"
+        />
+      </template>
+      <template #text>
+        <h2 class="text-2xl md:text-5xl font-ubuntu">SALA DE CONVIVIO</h2>
+      </template>
+    </ImgOverlay>
   </div>
 </template>
 
