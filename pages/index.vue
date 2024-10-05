@@ -57,11 +57,48 @@
         <h2 class="text-2xl md:text-4xl font-ubuntu">SALA DE CONVIVIO</h2>
       </template>
     </ImgOverlay>
+
+    <!-- This Space Section -->
+    <div class="flex flex-col items-center justify-center mt-6">
+      <p class="text-center">
+        Neste espaço, os utentes têm a possibilidade de conviver uns com os
+        outros e partilhar momentos, atividades e recordações.
+        <br />
+        É o local ideal para passar uma boa parte do dia e fugir ao isolamento.
+      </p>
+      <div class="grid grid-cols-3 gap-8 pb-12 pt-8 px-32 w-full">
+        <div
+          class="h-32 overflow-hidden"
+          v-for="(item, index) in thisSpaceData"
+          :key="index"
+        >
+          <img
+            class="grayscale-transition object-cover"
+            :src="item.img"
+            :alt="item.imgTitle"
+            :title="item.imgTitle"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const route = useRoute();
+const thisSpaceData = [
+  {
+    img: "/images/this_space.webp",
+    imgTitle: "Image Title",
+  },
+  {
+    img: "/images/this_space.webp",
+    imgTitle: "Image Title",
+  },
+  {
+    img: "/images/this_space.webp",
+    imgTitle: "Image Title",
+  },
+];
 
 const carouselData = [
   {

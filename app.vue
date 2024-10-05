@@ -12,3 +12,16 @@
     </NuxtLayout>
   </div>
 </template>
+
+<style>
+/* Global CSS */
+
+.grayscale-transition {
+  filter: grayscale(100%);
+  transition: filter 500ms ease;
+}
+
+.grayscale-transition:hover {
+  filter: grayscale(0%);
+}
+</style>
