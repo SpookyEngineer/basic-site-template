@@ -63,7 +63,7 @@
       <p class="text-center">
         Neste espaço, os utentes têm a possibilidade de conviver uns com os
         outros e partilhar momentos, atividades e recordações.
-        <br />
+        <br class="hidden md:block" />
         É o local ideal para passar uma boa parte do dia e fugir ao isolamento.
       </p>
       <div class="hidden md:grid md:grid-cols-3 gap-8 pb-12 pt-8 px-32 w-full">
