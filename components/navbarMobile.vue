@@ -1,7 +1,10 @@
 <template>
   <div>
     <TransitionSlide :offset="['100%', 0]">
-      <div v-if="menuOpen" class="fixed inset-0 bg-white text-black p-6 z-50">
+      <div
+        v-if="menuOpen"
+        class="fixed inset-0 bg-white font-bold text-black p-6 z-50"
+      >
         <div class="flex justify-between items-center mb-6">
           <span class="text-lg font-bold">Menu</span>
 

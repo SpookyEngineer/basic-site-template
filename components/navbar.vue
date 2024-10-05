@@ -1,11 +1,11 @@
 <template>
   <div class="border-y">
-    <nav class="flex justify-center align-middle bg-white pt-2">
+    <nav class="flex justify-center align-middle bg-white font-bold pt-2">
       <div v-for="(link, index) in navbarData" :key="index">
-        <nuxt-link v-if="!link.items" class="mx-1" :to="`${link.route}`">
+        <nuxt-link v-if="!link.items" class="mx-2" :to="`${link.route}`">
           {{ link.name }}
         </nuxt-link>
-        <NavbarLinkDropdown class="ml-1" v-else :navbarData="link" />
+        <NavbarLinkDropdown class="mx-2" v-else :navbarData="link" />
       </div>
     </nav>
   </div>
