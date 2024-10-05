@@ -10,9 +10,9 @@
       </template>
       <template #text>
         <div>
-          <h1 class="text-5xl">LAR DE IDOSOS</h1>
+          <h1 class="text-2xl md:text-5xl font-ubuntu">LAR DE IDOSOS</h1>
           <button
-            class="bg-aconchego-green py-2 px-6 rounded-lg mt-4 font-bold"
+            class="bg-aconchego-green py-2 px-6 rounded-lg mt-4 font-bold font-roboto"
           >
             Ligue-nos
           </button>
@@ -29,7 +29,7 @@
       </div>
       <p class="font-roboto mt-2">
         O nosso Lar de Idosos, em Gondomar, tem como principais objetivos
-        combater o isolamento social e prestar o <br />
+        combater o isolamento social e prestar o <br class="hidden md:block" />
         devido acompanhamento aos utentes das zonas do Porto, Gaia, Valongo,
         Maia e Matosinhos.
       </p>
