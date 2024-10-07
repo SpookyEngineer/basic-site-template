@@ -3,7 +3,7 @@
     <header class="sticky top-0 z-50">
       <div class="flex flex-col bg-aconchego-green text-white py-4 px-6">
         <div class="flex justify-between items-center">
-          <NuxtImg class="h-[72px]" quality="80" src="/icons/clinica.png" />
+          <NuxtImg class="h-8 md:h-16" quality="80" src="/icons/clinica.png" />
           <div
             class="md:flex hidden flex-col justify-center text-right font-ubuntu-condensed text-lg"
           >
