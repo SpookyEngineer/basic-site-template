@@ -204,8 +204,8 @@
       </template>
     </ImgOverlay>
 
-    <!-- Form Section -->
-    <div class="flex flex-col justify-center items-center my-4 mx-3 md:px-96">
+    <!-- Contact Us Section -->
+    <div class="flex flex-col justify-center items-center my-4 mx-3">
       <h2
         class="mb-3 text-aconchego-red text-xl font-ubuntu-condensed font-bold"
       >
@@ -215,7 +215,7 @@
         Fale connosco e tire as dúvidas sobre os nossos serviços.
       </p>
       <n-form
-        class="mt-6"
+        class="mt-6 flex justify-center items-center"
         ref="formRef"
         inline
         :label-width="80"
@@ -223,7 +223,7 @@
         :rules="rules"
         :size="size"
       >
-        <div class="flex flex-col justify-center items-center w-full">
+        <div class="flex flex-col justify-center items-center w-full md:w-2/5">
           <n-input
             class="border-2 border-aconchego-green"
             v-model:value="formValue.name"
