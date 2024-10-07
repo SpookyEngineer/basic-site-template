@@ -3,7 +3,7 @@
     <header class="sticky top-0 z-50">
       <div class="flex flex-col bg-aconchego-green text-white p-4">
         <div class="flex justify-between items-center">
-          <NuxtImg height="72px" quality="80" src="/icons/clinica.png" />
+          <NuxtImg class="h-[72px]" quality="80" src="/icons/clinica.png" />
           <div class="md:flex hidden flex-col justify-center text-right">
             <p>Contacte-nos</p>
             <p>Chamada</p>
