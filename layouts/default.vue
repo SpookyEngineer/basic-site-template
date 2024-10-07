@@ -1,12 +1,14 @@
 <template>
   <div>
     <header class="sticky top-0 z-50">
-      <div class="flex flex-col bg-aconchego-green text-white p-4">
+      <div class="flex flex-col bg-aconchego-green text-white py-4 px-6">
         <div class="flex justify-between items-center">
           <NuxtImg class="h-[72px]" quality="80" src="/icons/clinica.png" />
-          <div class="md:flex hidden flex-col justify-center text-right">
+          <div
+            class="md:flex hidden flex-col justify-center text-right font-ubuntu-condensed text-lg"
+          >
             <p>Contacte-nos</p>
-            <p>Chamada</p>
+            <p class="text-black font-bold">Chamada: 123456789</p>
           </div>
           <!-- Hamburger Menu, Only appears on mobile -->
           <button @click="toggleMenu" class="md:hidden focus:outline-none">
