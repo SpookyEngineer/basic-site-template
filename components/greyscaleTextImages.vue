@@ -24,7 +24,7 @@ interface ImagesDataItem {
   imgTitle: string;
 }
 
-type ImagesData = ImagesDataItem;
+type ImagesData = ImagesDataItem[];
 
 interface Props {
   imagesData: ImagesData;
