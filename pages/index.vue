@@ -1,25 +1,7 @@
 <template>
   <div>
     <!-- Lar de Idosos Image -->
-    <ImgOverlay>
-      <template #img>
-        <img
-          class="w-full block max-h-96 object-cover"
-          src="/images/lar_idosos.webp"
-          alt="Sample Image"
-        />
-      </template>
-      <template #text>
-        <div>
-          <h1 class="text-2xl md:text-4xl font-ubuntu">LAR DE IDOSOS</h1>
-          <button
-            class="bg-aconchego-green py-2 px-6 rounded-lg mt-4 font-bold font-roboto"
-          >
-            Ligue-nos
-          </button>
-        </div>
-      </template>
-    </ImgOverlay>
+    <SectionDisplay :section-data="nursingHomeSection" />
 
     <div
       class="flex flex-col items-center justify-center text-center py-8 md:my-8 px-16 md:px-32"
@@ -44,165 +26,23 @@
       <CarouselMobile :carouselData="carouselData" />
     </div>
 
-    <!-- Sala de Convivio Image -->
-    <ImgOverlay>
-      <template #img>
-        <img
-          class="w-full block max-h-96 object-cover"
-          src="/images/this_space.webp"
-          alt="Sample Image"
-        />
-      </template>
-      <template #text>
-        <h2 class="text-2xl md:text-4xl font-ubuntu">SALA DE CONVIVIO</h2>
-      </template>
-    </ImgOverlay>
-
-    <!-- This Space Section -->
-    <GreyscaleTextImages :imagesData="thisSpaceData">
-      <template #text>
-        <p class="text-center">
-          Neste espaço, os utentes têm a possibilidade de conviver uns com os
-          outros e partilhar momentos, atividades e recordações.
-          <br class="hidden md:block" />
-          É o local ideal para passar uma boa parte do dia e fugir ao
-          isolamento.
-        </p>
-      </template>
-    </GreyscaleTextImages>
-    <!-- Mobile Section -->
-    <div class="mx-8 my-4 md:hidden">
-      <CarouselMobile :carouselData="thisSpaceData" />
-    </div>
+    <!-- Living Room Section -->
+    <SectionDisplay :section-data="livingRoomSection" />
 
     <!-- Our Rooms Section -->
-    <ImgOverlay>
-      <template #img>
-        <img
-          class="w-full block max-h-96 object-cover"
-          src="/images/lar_idosos.webp"
-          alt="Sample Image"
-        />
-      </template>
-      <template #text>
-        <h2 class="text-2xl md:text-4xl font-ubuntu">QUARTOS</h2>
-      </template>
-    </ImgOverlay>
-    <GreyscaleTextImages :imagesData="ourRoomsData">
-      <template #text>
-        <p class="text-center">
-          Os nossos quartos apresentam toda a comodidade que os nossos utente
-          precisam. Todos os quartos têm casa de banho privativa, televisão por
-          cabo e telefone.
-          <br class="hidden md:block" />
-          Decorados com um ambiente acolhedor, tornam a sua estadia muito
-          agradável. Pode optar por quartos individuais ou duplos.
-        </p>
-      </template>
-    </GreyscaleTextImages>
-    <!-- Mobile Section -->
-    <div class="mx-8 my-4 md:hidden">
-      <CarouselMobile :carouselData="ourRoomsData" />
-    </div>
+    <SectionDisplay :section-data="ourRoomsSection" />
 
     <!-- Accesses Section -->
-    <ImgOverlay>
-      <template #img>
-        <img
-          class="w-full block max-h-96 object-cover"
-          src="/images/lar_idosos.webp"
-          alt="Sample Image"
-        />
-      </template>
-      <template #text>
-        <h2 class="text-2xl md:text-4xl font-ubuntu">CORREDORES E ACESSOS</h2>
-      </template>
-    </ImgOverlay>
-    <GreyscaleTextImages :imagesData="accessData">
-      <template #text>
-        <p class="text-center">
-          Os nossos corredores e acessos são adaptados para pessoas com menor
-          mobilidade para que todos os utentes se possam movimentar para
-          qualquer parte das nossas instalações.
-        </p>
-      </template>
-    </GreyscaleTextImages>
-    <div class="mx-8 my-4 md:hidden">
-      <CarouselMobile :carouselData="accessData" />
-    </div>
+    <SectionDisplay :section-data="accessSection" />
 
     <!-- Kitchen Section -->
-    <ImgOverlay>
-      <template #img>
-        <img
-          class="w-full block max-h-96 object-cover"
-          src="/images/lar_idosos.webp"
-          alt="Sample Image"
-        />
-      </template>
-      <template #text>
-        <h2 class="text-2xl md:text-4xl font-ubuntu">COZINHA</h2>
-      </template>
-    </ImgOverlay>
-    <GreyscaleTextImages :imagesData="kitchenData">
-      <template #text>
-        <p class="text-center">
-          Na nossa cozinha preparamos refeições saudáveis e nutritivas.
-          <br class="hidden md:block" />
-          Os nossos cozinheiros têm em atenção as restrições das dietas para que
-          não prejudiquem a saúde dos utentes.
-        </p>
-      </template>
-    </GreyscaleTextImages>
-    <div class="mx-8 my-4 md:hidden">
-      <CarouselMobile :carouselData="kitchenData" />
-    </div>
+    <SectionDisplay :section-data="kitchenSection" />
 
     <!-- Exteriors Section -->
-    <ImgOverlay>
-      <template #img>
-        <img
-          class="w-full block max-h-96 object-cover"
-          src="/images/lar_idosos.webp"
-          alt="Sample Image"
-        />
-      </template>
-      <template #text>
-        <h2 class="text-2xl md:text-4xl font-ubuntu">EXTERIORES</h2>
-      </template>
-    </ImgOverlay>
-    <GreyscaleTextImages :imagesData="exteriorsData">
-      <template #text>
-        <p class="text-center">
-          Veja os exteriores das nossas instalações e conheça os espaços ao ar
-          livre de que pode usufruir.
-        </p>
-      </template>
-    </GreyscaleTextImages>
-    <div class="mx-8 my-4 md:hidden">
-      <CarouselMobile :carouselData="exteriorsData" />
-    </div>
+    <SectionDisplay :section-data="exterioresSection" />
 
     <!-- Location Section -->
-    <ImgOverlay>
-      <template #img>
-        <img
-          class="w-full block max-h-96 object-cover"
-          src="/images/lar_idosos.webp"
-          alt="Sample Image"
-        />
-      </template>
-      <template #text>
-        <h2 class="text-2xl md:text-4xl font-ubuntu mb-2">LOCALIZAÇÃO</h2>
-        <p>
-          Visite as nossas instalações na rua Lorem Ipsum. Marque já a sua
-          visita!
-        </p>
-        <br />
-        <p class="mb-6">Lorem Ipsum dolor sit amet</p>
-        <n-button>Marque ums visita</n-button>
-      </template>
-    </ImgOverlay>
+    <SectionDisplay :section-data="locationSection" />
 
     <!-- Contact Us Section -->
     <div class="flex flex-col justify-center items-center my-4 mx-3">
@@ -316,92 +156,146 @@ const handleValidateClick = (e: MouseEvent) => {
   });
 };
 
-const exteriorsData = [
-  {
-    img: "/images/this_space.webp",
-    imgTitle: "Image Title",
-  },
-  {
-    img: "/images/this_space.webp",
-    imgTitle: "Image Title",
-  },
-  {
-    img: "/images/this_space.webp",
-    imgTitle: "Image Title",
-  },
-];
+const nursingHomeSection = {
+  img: "lar_idosos.webp",
+  imgTitle: "Lar de Idosos",
+  title: "LAR DE IDOSOS",
+  buttonContent: "Ligue-nos",
+};
 
-const kitchenData = [
-  {
-    img: "/images/this_space.webp",
-    imgTitle: "Image Title",
+const livingRoomSection = {
+  img: "this_space.webp",
+  imgTitle: "Sala de Estar",
+  title: "SALA DE ESTAR",
+  greyscaleSection: {
+    text: "Neste espaço, os utentes têm a possibilidade de conviver uns com os outros e partilhar momentos, atividades e recordações. É o local ideal para passar uma boa parte do dia e fugir ao isolamento.",
+    gridImages: [
+      {
+        img: "/images/this_space.webp",
+        imgTitle: "Image Title",
+      },
+      {
+        img: "/images/this_space.webp",
+        imgTitle: "Image Title",
+      },
+      {
+        img: "/images/this_space.webp",
+        imgTitle: "Image Title",
+      },
+    ],
   },
-  {
-    img: "/images/this_space.webp",
-    imgTitle: "Image Title",
-  },
-  {
-    img: "/images/this_space.webp",
-    imgTitle: "Image Title",
-  },
-];
+};
 
-const accessData = [
-  {
-    img: "/images/this_space.webp",
-    imgTitle: "Image Title",
+const ourRoomsSection = {
+  img: "this_space.webp",
+  imgTitle: "Quartos",
+  title: "QUARTOS",
+  greyscaleSection: {
+    text: "Os nossos quartos apresentam toda a comodidade que os nossos utente precisam. Todos os quartos têm casa de banho privativa, televisão por cabo e telefone. Decorados com um ambiente acolhedor, tornam a sua estadia muito agradável. Pode optar por quartos individuais ou duplos.",
+    gridImages: [
+      {
+        img: "/images/this_space.webp",
+        imgTitle: "Image Title",
+      },
+      {
+        img: "/images/this_space.webp",
+        imgTitle: "Image Title",
+      },
+      {
+        img: "/images/this_space.webp",
+        imgTitle: "Image Title",
+      },
+      {
+        img: "/images/this_space.webp",
+        imgTitle: "Image Title",
+      },
+      {
+        img: "/images/this_space.webp",
+        imgTitle: "Image Title",
+      },
+      {
+        img: "/images/this_space.webp",
+        imgTitle: "Image Title",
+      },
+    ],
   },
-  {
-    img: "/images/this_space.webp",
-    imgTitle: "Image Title",
-  },
-  {
-    img: "/images/this_space.webp",
-    imgTitle: "Image Title",
-  },
-];
+};
 
-const ourRoomsData = [
-  {
-    img: "/images/this_space.webp",
-    imgTitle: "Image Title",
+const accessSection = {
+  img: "this_space.webp",
+  imgTitle: "Acessos",
+  title: "CORREDORES E ACESSOS",
+  greyscaleSection: {
+    text: "Os nossos corredores e acessos são adaptados para pessoas com menor mobilidade para que todos os utentes se possam movimentar para qualquer parte das nossas instalações.",
+    gridImages: [
+      {
+        img: "/images/this_space.webp",
+        imgTitle: "Image Title",
+      },
+      {
+        img: "/images/this_space.webp",
+        imgTitle: "Image Title",
+      },
+      {
+        img: "/images/this_space.webp",
+        imgTitle: "Image Title",
+      },
+    ],
   },
-  {
-    img: "/images/this_space.webp",
-    imgTitle: "Image Title",
-  },
-  {
-    img: "/images/this_space.webp",
-    imgTitle: "Image Title",
-  },
-  {
-    img: "/images/this_space.webp",
-    imgTitle: "Image Title",
-  },
-  {
-    img: "/images/this_space.webp",
-    imgTitle: "Image Title",
-  },
-  {
-    img: "/images/this_space.webp",
-    imgTitle: "Image Title",
-  },
-];
+};
 
-const thisSpaceData = [
-  {
-    img: "/images/this_space.webp",
-    imgTitle: "Image Title",
+const kitchenSection = {
+  img: "this_space.webp",
+  imgTitle: "Cozinha",
+  title: "COZINHA",
+  greyscaleSection: {
+    text: "Na nossa cozinha preparamos refeições saudáveis e nutritivas. Os nossos cozinheiros têm em atenção as restrições das dietas para que não prejudiquem a saúde dos utentes.",
+    gridImages: [
+      {
+        img: "/images/this_space.webp",
+        imgTitle: "Image Title",
+      },
+      {
+        img: "/images/this_space.webp",
+        imgTitle: "Image Title",
+      },
+      {
+        img: "/images/this_space.webp",
+        imgTitle: "Image Title",
+      },
+    ],
   },
-  {
-    img: "/images/this_space.webp",
-    imgTitle: "Image Title",
+};
+
+const exterioresSection = {
+  img: "this_space.webp",
+  imgTitle: "Acessos",
+  title: "CORREDORES E ACESSOS",
+  greyscaleSection: {
+    text: "Veja os exteriores das nossas instalações e conheça os espaços ao ar livre de que pode usufruir.",
+    gridImages: [
+      {
+        img: "/images/this_space.webp",
+        imgTitle: "Image Title",
+      },
+      {
+        img: "/images/this_space.webp",
+        imgTitle: "Image Title",
+      },
+      {
+        img: "/images/this_space.webp",
+        imgTitle: "Image Title",
+      },
+    ],
   },
-  {
-    img: "/images/this_space.webp",
-    imgTitle: "Image Title",
-  },
-];
+};
+
+const locationSection = {
+  img: "this_space.webp",
+  imgTitle: "Localização",
+  title: "LOCALIZAÇÃO",
+  buttonContent: "Marque uma visita",
+};
 
 const carouselData = [
   {
