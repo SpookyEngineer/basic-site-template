@@ -32,7 +32,7 @@ interface CarouselItem {
 type CarouselData = CarouselItem[];
 
 interface Props {
-  carouselData: CarouselData;
+  carouselData?: CarouselData;
 }
 
 const props = defineProps<Props>();

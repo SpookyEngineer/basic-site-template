@@ -27,7 +27,7 @@ interface ImagesDataItem {
 type ImagesData = ImagesDataItem[];
 
 interface Props {
-  imagesData: ImagesData;
+  imagesData?: ImagesData;
 }
 
 const props = defineProps<Props>();
