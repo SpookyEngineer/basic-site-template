@@ -16,6 +16,10 @@
 <style>
 /* Global CSS */
 
+body {
+  background-color: #f4f4f4;
+}
+
 .grayscale-transition {
   filter: grayscale(100%);
   transition: filter 500ms ease;
