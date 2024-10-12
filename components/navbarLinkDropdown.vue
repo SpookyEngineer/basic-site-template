@@ -9,7 +9,7 @@
     >
       <!-- The below is the dropdown label -->
       <span
-        class="flex items-center cursor-pointer"
+        class="flex items-center cursor-pointer w-full h-full"
         v-on:click="routingFunction(`/${navbarData.route}`)"
       >
         {{ navbarData.name }}
@@ -23,6 +23,7 @@
       <!-- The below is the dropdown itself -->
       <template #item="{ item }">
         <span
+          class="w-full h-full"
           v-on:click="routingFunction(`/${navbarData.route}#${item.subRoute}`)"
         >
           {{ item.label }}
