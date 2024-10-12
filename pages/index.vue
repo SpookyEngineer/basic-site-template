@@ -20,7 +20,7 @@
 
     <!-- Carousels -->
     <div
-      class="bg-aconchego-green flex items-centers justify-center p-8 md:p-16"
+      class="bg-aconchego-blue flex items-centers justify-center p-8 md:p-16"
     >
       <Carousel :carouselData="carouselData" />
       <CarouselMobile :carouselData="carouselData" />

@@ -16,7 +16,7 @@
         <p v-if="sectionData.subTitle">{{ sectionData.subTitle }}</p>
         <button
           v-if="sectionData.buttonContent"
-          class="bg-aconchego-green py-2 px-6 rounded-lg mt-4 font-bold font-roboto"
+          class="bg-aconchego-blue transition duration-300 hover:bg-aconchego-light-blue py-2 px-6 rounded-lg mt-4 font-bold font-roboto"
         >
           {{ sectionData.buttonContent }}
         </button>

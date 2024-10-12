@@ -1,7 +1,7 @@
 <template>
   <div>
     <header class="sticky top-0 z-50">
-      <div class="flex flex-col bg-aconchego-green text-white py-4 px-6">
+      <div class="flex flex-col bg-aconchego-blue text-white py-4 px-6">
         <div class="flex justify-between items-center">
           <NuxtImg class="h-8 md:h-16" quality="80" src="/icons/clinica.png" />
           <div

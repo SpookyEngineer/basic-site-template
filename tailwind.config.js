@@ -2,7 +2,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "aconchego-green": "#559a28",
+        "aconchego-blue": "#1c244b",
+        "aconchego-light-blue": "#467ff7",
         "aconchego-red": "#E03F3D",
       },
       fontFamily: {

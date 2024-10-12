@@ -17,27 +17,27 @@
     >
       <div class="flex flex-col justify-center items-center w-full md:w-2/5">
         <n-input
-          class="border-2 border-aconchego-green"
+          class="border-2 border-aconchego-blue"
           v-model:value="formValue.name"
           placeholder="*Nome"
           clearable
         />
         <n-input
-          class="border-2 border-aconchego-green my-3"
+          class="border-2 border-aconchego-blue my-3"
           color="#559a28"
           v-model:value="formValue.email"
           placeholder="*Email"
           clearable
         />
         <n-input
-          class="border-2 border-aconchego-green"
+          class="border-2 border-aconchego-blue"
           v-model:value="formValue.phone"
           placeholder="Telefone"
           clearable
           :allow-input="onlyAllowNumber"
         />
         <n-input
-          class="border-2 border-aconchego-green my-3"
+          class="border-2 border-aconchego-blue my-3"
           type="textarea"
           v-model:value="formValue.message"
           placeholder="Mensagem"
