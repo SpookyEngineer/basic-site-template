@@ -1,108 +1,91 @@
 <template>
-  <div class="flex flex-col justify-center items-center my-4 mx-3">
-    <h2 class="mb-3 text-aconchego-red text-xl font-ubuntu-condensed font-bold">
-      Fale connosco, estamos aqui para ajudar
-    </h2>
-    <p class="font-bold text-sm">
-      Fale connosco e tire as dúvidas sobre os nossos serviços.
-    </p>
+  <div class="flex items-center justify-center mx-4">
     <n-form
-      class="mt-6 flex justify-center items-center"
+      class="w-full md:w-2/5"
       ref="formRef"
-      inline
-      :label-width="80"
       :model="formValue"
       :rules="rules"
       :size="size"
     >
-      <div class="flex flex-col justify-center items-center w-full md:w-2/5">
+      <n-form-item label="Name" path="user.name">
+        <n-input v-model:value="formValue.user.name" placeholder="*Nome" />
+      </n-form-item>
+
+      <n-form-item label="Email" path="user.email">
+        <n-input v-model:value="formValue.user.email" placeholder="*Email" />
+      </n-form-item>
+
+      <n-form-item label="Phone" path="user.phone">
+        <n-input v-model:value="formValue.user.phone" placeholder="Telefone" />
+      </n-form-item>
+
+      <n-form-item label="Message" path="user.message">
         <n-input
-          class="border-2 border-aconchego-blue"
-          v-model:value="formValue.name"
-          placeholder="*Nome"
-          clearable
-        />
-        <n-input
-          class="border-2 border-aconchego-blue my-3"
-          color="#559a28"
-          v-model:value="formValue.email"
-          placeholder="*Email"
-          clearable
-        />
-        <n-input
-          class="border-2 border-aconchego-blue"
-          v-model:value="formValue.phone"
-          placeholder="Telefone"
-          clearable
-          :allow-input="onlyAllowNumber"
-        />
-        <n-input
-          class="border-2 border-aconchego-blue my-3"
-          type="textarea"
-          v-model:value="formValue.message"
+          v-model:value="formValue.user.message"
           placeholder="Mensagem"
-          clearable
+          type="textarea"
+          show-count
+          maxlength="1000"
         />
-        <n-button
-          @click="handleValidateClick"
-          ghost
-          color="#559a28"
-          class="font-ubuntu-condensed px-16 py-4 text-black"
-        >
-          Enviar
-        </n-button>
-      </div>
+      </n-form-item>
+
+      <n-form-item>
+        <n-button @click="handleValidateClick"> Validate </n-button>
+      </n-form-item>
     </n-form>
   </div>
 </template>
 
 <script setup lang="ts">
-import { type FormInst } from "naive-ui";
+import { ref } from "vue";
+import type { FormInst } from "naive-ui";
 
 const formRef = ref<FormInst | null>(null);
-
-const size = ref<"small" | "medium" | "large">("large");
-
+const size = ref<"small" | "medium" | "large">("medium");
 const formValue = ref({
-  name: "",
-  email: "",
-  phone: "",
-  message: "",
+  user: {
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  },
 });
 
-const onlyAllowNumber = (value: string) => !value || /^\d+$/.test(value);
-
 const rules = {
-  name: {
-    required: true,
-    message: "Por favor, insira seu nome",
-    trigger: "blur",
-  },
-  email: {
-    required: true,
-    message: "Por favor, insira sua idade",
-    trigger: ["input", "blur"],
-  },
-  phone: {
-    required: false,
-    message: "Por favor, insira seu número",
-    trigger: ["input"],
-  },
-  message: {
-    required: false,
-    message: "Por favor, insira sua mensagem",
-    trigger: ["input"],
+  user: {
+    name: {
+      required: true,
+      message: "Please input your name",
+      trigger: "blur",
+    },
+    email: {
+      required: true,
+      message: "Please input your age",
+      trigger: ["input", "blur"],
+    },
+    phone: {
+      required: false,
+      message: "Please input your age",
+      trigger: ["input", "blur"],
+      type: "number",
+    },
+    message: {
+      required: false,
+      message: "Please input your age",
+      trigger: ["input", "blur"],
+    },
   },
 };
 
-const handleValidateClick = (e: MouseEvent) => {
+function handleValidateClick(e: MouseEvent) {
   e.preventDefault();
   formRef.value?.validate((errors) => {
     if (!errors) {
       console.log("Valid");
     } else {
       console.log(errors);
+      console.log("Invalid");
     }
   });
-};
+}
 </script>
