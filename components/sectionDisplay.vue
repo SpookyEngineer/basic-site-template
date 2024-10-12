@@ -27,10 +27,15 @@
       :imagesData="sectionData.greyscaleSection?.gridImages"
     >
       <template #text>
-        <p
-          class="text-center"
-          v-html="breakLine(sectionData.greyscaleSection?.text)"
-        />
+        <div class="px-2">
+          <p
+            class="text-center hidden md:block"
+            v-html="breakLine(sectionData.greyscaleSection?.text)"
+          />
+          <p class="text-center md:hidden">
+            {{ sectionData.greyscaleSection?.text }}
+          </p>
+        </div>
       </template>
     </GreyscaleTextImages>
     <div class="mx-8 my-4 md:hidden">

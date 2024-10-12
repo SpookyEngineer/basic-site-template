@@ -4,9 +4,9 @@
     <SectionDisplay :section-data="nursingHomeSection" />
 
     <div
-      class="flex flex-col items-center justify-center text-center py-8 md:my-8 px-16 md:px-32"
+      class="flex flex-col items-center justify-center text-center pb-8 md:my-8 px-16 md:px-32"
     >
-      <div class="text-xl md:text-3xl font-ubuntu-condensed">
+      <div class="text-2xl md:text-4xl font-ubuntu-condensed">
         <h2 class="text-aconchego-red mb-2">VEJA AQUI AS NOSSAS INSTALAÇÕES</h2>
         <h2>CLÍNICA DE REPOUSO O ACONCHEGO</h2>
       </div>
