@@ -112,7 +112,7 @@ h1 {
 }
 
 .team-member {
-  flex: 1 1 calc(33.333% - 20px);
+  @apply flex flex-col items-center;
   margin: 10px;
   text-align: center;
   background-color: #fff;
