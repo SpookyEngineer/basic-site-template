@@ -3,10 +3,10 @@
     <TransitionSlide :offset="['100%', 0]">
       <div
         v-if="menuOpen"
-        class="fixed inset-0 bg-white font-bold text-black p-6 z-50"
+        class="fixed inset-0 bg-white text-black font-medium font-ubuntu p-6 z-50"
       >
         <div class="flex justify-between items-center mb-6">
-          <span class="text-lg font-bold">Menu</span>
+          <span class="text-xl">Menu</span>
 
           <!-- Close Button -->
           <button @click="toggleMenu" class="focus:outline-none">
@@ -17,11 +17,11 @@
         <div
           v-for="(link, index) in navbarData"
           :key="index"
-          class="flex flex-col"
+          class="flex flex-col text-xl"
         >
           <nuxt-link
             v-if="!link.items"
-            class="block pt-2"
+            class="block pt-3"
             @click="toggleMenu"
             :to="`${link.route}`"
           >
@@ -31,7 +31,7 @@
           <div v-else>
             <div
               @click="toggleDropdown(index)"
-              class="flex justify-between items-center cursor-pointer pt-1"
+              class="flex justify-between items-center cursor-pointer pt-3"
             >
               {{ link.name }}
               <Icon

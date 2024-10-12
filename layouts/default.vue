@@ -1,17 +1,19 @@
 <template>
   <div>
-    <header class="sticky top-0 z-50">
-      <div class="flex flex-col bg-aconchego-blue text-white py-4 px-6">
+    <header class="sticky top-0 z-50 bg-aconchego-blue">
+      <div class="flex flex-col text-white py-4 px-6 md:mx-16">
         <div class="flex justify-between items-center">
           <NuxtImg class="h-8 md:h-16" quality="80" src="/icons/clinica.png" />
           <div
             class="md:flex hidden flex-col justify-center text-right font-ubuntu-condensed text-lg"
           >
-            <p>Contacte-nos</p>
-            <p class="text-black font-bold">Chamada: 123456789</p>
+            <navbar class="hidden md:block" :navbarData="navbarData" />
           </div>
           <!-- Hamburger Menu, Only appears on mobile -->
-          <button @click="toggleMenu" class="md:hidden focus:outline-none">
+          <button
+            @click="toggleMenu"
+            class="md:hidden focus:outline-none flex items-center justify-center"
+          >
             <Icon name="cil:hamburger-menu" size="26px" />
           </button>
         </div>
@@ -22,7 +24,6 @@
         v-model:menuOpen="menuOpen"
         :navbarData="navbarData"
       />
-      <navbar class="hidden md:block" :navbarData="navbarData" />
     </header>
 
     <main>

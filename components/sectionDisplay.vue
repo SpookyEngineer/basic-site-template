@@ -27,7 +27,7 @@
       :imagesData="sectionData.greyscaleSection?.gridImages"
     >
       <template #text>
-        <div class="px-2">
+        <div class="px-2 font font-roboto">
           <p
             class="text-center hidden md:block"
             v-html="breakLine(sectionData.greyscaleSection?.text)"

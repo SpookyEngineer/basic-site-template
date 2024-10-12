@@ -1,6 +1,8 @@
 <template>
-  <div class="border-y">
-    <nav class="flex justify-center align-middle bg-white font-bold pt-2">
+  <div>
+    <nav
+      class="flex justify-center align-middle bg-aconchego-blue font-roboto font-bold"
+    >
       <div v-for="(link, index) in navbarData" :key="index">
         <nuxt-link v-if="!link.items" class="mx-2" :to="`${link.route}`">
           {{ link.name }}
