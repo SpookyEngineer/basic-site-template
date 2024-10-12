@@ -75,6 +75,10 @@ const navbarData = [
       ],
     ],
   },
+  {
+    name: "Invista em Nós",
+    route: "https://mentoriajulianemaria.com.br/projeto-fg/",
+  },
 ];
 
 function toggleMenu() {
