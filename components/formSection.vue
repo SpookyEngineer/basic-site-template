@@ -7,19 +7,19 @@
       :rules="rules"
       :size="size"
     >
-      <n-form-item label="Name" path="user.name">
-        <n-input v-model:value="formValue.user.name" placeholder="*Nome" />
+      <n-form-item label="Nome" path="user.name">
+        <n-input v-model:value="formValue.user.name" placeholder="Nome" />
       </n-form-item>
 
       <n-form-item label="Email" path="user.email">
-        <n-input v-model:value="formValue.user.email" placeholder="*Email" />
+        <n-input v-model:value="formValue.user.email" placeholder="Email" />
       </n-form-item>
 
-      <n-form-item label="Phone" path="user.phone">
+      <n-form-item label="Telefone" path="user.phone">
         <n-input v-model:value="formValue.user.phone" placeholder="Telefone" />
       </n-form-item>
 
-      <n-form-item label="Message" path="user.message">
+      <n-form-item label="Mensagem" path="user.message">
         <n-input
           v-model:value="formValue.user.message"
           placeholder="Mensagem"

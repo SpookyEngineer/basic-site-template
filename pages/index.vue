@@ -45,7 +45,9 @@
     <SectionDisplay :section-data="locationSection" />
 
     <!-- Contact Us Section -->
-    <FormSection />
+    <div class="my-4">
+      <FormSection />
+    </div>
   </div>
 </template>
 
