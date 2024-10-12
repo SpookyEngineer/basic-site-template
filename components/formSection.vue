@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-center justify-center mx-4">
+  <div class="flex items-center justify-center m-4">
     <n-form
       class="w-full md:w-2/5"
       ref="formRef"
