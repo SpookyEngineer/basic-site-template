@@ -8,7 +8,7 @@
     >
       <div class="text-2xl md:text-4xl font-ubuntu-condensed">
         <h2 class="text-aconchego-red mb-2">VEJA AQUI AS NOSSAS INSTALAÇÕES</h2>
-        <h2>CLÍNICA DE REPOUSO O ACONCHEGO</h2>
+        <h3>CLÍNICA DE REPOUSO O ACONCHEGO</h3>
       </div>
       <p class="font-roboto mt-2">
         O nosso Lar de Idosos, em Gondomar, tem como principais objetivos
@@ -43,11 +43,6 @@
 
     <!-- Location Section -->
     <SectionDisplay :section-data="locationSection" />
-
-    <!-- Contact Us Section -->
-    <div class="my-4">
-      <FormSection />
-    </div>
   </div>
 </template>
 
@@ -188,8 +183,8 @@ const exterioresSection = {
 
 const locationSection = {
   img: "this_space.webp",
-  imgTitle: "Localização",
-  title: "LOCALIZAÇÃO",
+  imgTitle: "Visit",
+  title: "MARQUE UMA VISITA",
   buttonContent: "Marque uma visita",
 };
 
